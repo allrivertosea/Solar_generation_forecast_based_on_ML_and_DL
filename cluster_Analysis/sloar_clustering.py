@@ -60,4 +60,4 @@ print("Cluster nb / Nb of countries in the cluster", X.label.value_counts())
 
 print("Countries grouped by cluster")
 for k in range(6):
-    print('cluster nb : {k}', " ".join(list(X[X.label == k].index)))
+    print('cluster nb : {%d}'%k', " ".join(list(X[X.label == k].index)))
