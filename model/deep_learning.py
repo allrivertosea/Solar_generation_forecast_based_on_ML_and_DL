@@ -9,7 +9,7 @@ import seaborn as sns
 ##模型训练
 model_instances, model_names, rmse_train, rmse_test = [], [], [], []
 
-df = pd.read_csv("F:\mygithub\Big_Data_Renewable_energies-master\dataset\solar_generation_by_station.csv")
+df = pd.read_csv("dataset\solar_generation_by_station.csv")
 df = df[sorted([c for c in df.columns if 'FR' in c])]
 
 # 只保留最近4年的FR数据
