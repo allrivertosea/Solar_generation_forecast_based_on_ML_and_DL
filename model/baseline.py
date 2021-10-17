@@ -8,7 +8,7 @@ warnings.filterwarnings("ignore")
 pd.options.display.max_columns = 300
 
 ##原始数据
-df = pd.read_csv("F:\mygithub\Big_Data_Renewable_energies-master\dataset\solar_generation_by_station.csv")
+df = pd.read_csv("dataset\solar_generation_by_station.csv")
 train_data,test_data = dataset_con(df)
 
 ##模型训练
