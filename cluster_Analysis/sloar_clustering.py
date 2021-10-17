@@ -7,7 +7,7 @@ pd.options.display.max_columns = 300
 import warnings
 warnings.filterwarnings("ignore")
 
-path = "F:\mygithub\Big_Data_Renewable_energies-master\dataset"
+path = "dataset"
 df_solar_co = pd.read_csv(path + "\solar_generation_by_country.csv")
 # print(df_solar_co.head(2))
 # print(df_solar_co.columns)
