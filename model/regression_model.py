@@ -8,7 +8,7 @@ warnings.filterwarnings("ignore")
 pd.options.display.max_columns = 300
 
 ##原始数据
-df = pd.read_csv("F:\mygithub\Big_Data_Renewable_energies-master\dataset\solar_generation_by_station.csv")
+df = pd.read_csv("\dataset\solar_generation_by_station.csv")
 train_data,test_data = dataset_con(df)
 ##模型训练
 model_instances, model_names, rmse_train, rmse_test = [], [], [], []
@@ -51,11 +51,4 @@ for model, name in zip(model_list, model_names):
     rmse_train.append(sc_train)
     rmse_test.append(sc_test)
 
-##支持向量回归不够高效
-#
-#SVM lin. 	 - RMSE on Training  = 0.31 / RMSE on Test = 0.30
-#核支持向量机
-#SVM poly. 	 - RMSE on Training  = 0.52 / RMSE on Test = 0.56
-##如果我们使用多项式特征将日期时间信息提升到不同的幂
-##如果我们将日期时间信息作为分类特征处理，这是处理此类数据的正确方法
 
