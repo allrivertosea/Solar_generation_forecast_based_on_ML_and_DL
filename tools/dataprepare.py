@@ -8,7 +8,7 @@ pd.options.display.max_columns = 300
 import warnings
 warnings.filterwarnings("ignore")
 ##数据准备
-df = pd.read_csv("F:\mygithub\Big_Data_Renewable_energies-master\dataset\solar_generation_by_station.csv")
+df = pd.read_csv("dataset\solar_generation_by_station.csv")
 
 def add_date_time(_df):
     "返回带有两个新列的 DF：一天中的时间和小时"
