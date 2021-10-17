@@ -8,7 +8,7 @@ pd.options.display.max_columns = 300
 
 import warnings
 warnings.filterwarnings("ignore")
-path = "F:\mygithub\Big_Data_Renewable_energies-master\dataset"
+path = "dataset"
 df_solar_co = pd.read_csv(path + "\solar_generation_by_country.csv")
 df_solar_co = df_solar_co[['NO', 'AT', 'FR', 'FI', 'RO', 'ES']]#以这几个国家代表各自集群
 #解决时间戳
@@ -75,7 +75,7 @@ plt.xlabel("Year")
 plt.ylabel("Efficiency")
 plt.title("Efficiency across the years per country")
 
-#各国平均效率
+#各国第三四分位
 temp_df = df_solar_co[(5 < df_solar_co.hour) & (df_solar_co.hour < 22)]
 temp_df = temp_df.drop(columns=['time', 'hour', 'month', 'week'])
 temp_df.describe()
